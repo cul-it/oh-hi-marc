@@ -73,7 +73,7 @@ export function FileUpload({ onFileSelect, isLoading }: FileUploadProps) {
     >
       <input
         type="file"
-        accept=".mrc,.marc"
+        accept=".mrc,.marc,.dat"
         onChange={handleFileInput}
         className="absolute inset-0 w-full h-full opacity-0 cursor-pointer"
         disabled={isLoading}
