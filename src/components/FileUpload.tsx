@@ -34,10 +34,10 @@ export function FileUpload({ onFileSelect, isLoading }: FileUploadProps) {
       const files = e.dataTransfer.files;
       if (files && files.length > 0) {
         const file = files[0];
-        if (file.name.endsWith('.mrc') || file.name.endsWith('.marc')) {
+        if (file.name.endsWith('.mrc') || file.name.endsWith('.marc') || file.name.endsWith('.dat')) {
           onFileSelect(file);
         } else {
-          alert('Please upload a MARC file (.mrc or .marc)');
+          alert('Please upload a MARC file (.mrc, .marc, or .dat)');
         }
       }
     },
@@ -128,7 +128,7 @@ export function FileUpload({ onFileSelect, isLoading }: FileUploadProps) {
           </p>
         </div>
 
-        <p className="text-xs text-gray-400">Supports .mrc and .marc files</p>
+        <p className="text-xs text-gray-400">Supports .mrc, .marc, and .dat files</p>
       </div>
     </div>
   );
